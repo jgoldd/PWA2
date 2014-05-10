@@ -2,6 +2,9 @@
     ASSIGNMENT: Prototype
     DATE: May 7th, 2014
 */
+
+/* PAGE OVERVIEW */
+
 *{
    margin:0;
    padding:0;
@@ -58,8 +61,6 @@ a:active{
     font-size: 18px;
     
 }
-
-
 h1{
     font-size: 32px;
     color: #4cc497;
@@ -85,9 +86,7 @@ h4{
     font-size: 18px;
     font-family: 'Titillium Web', sans-serif;
     color: #3c3c3c;
-    font-weight: 300;
-    
-    
+    font-weight: 300; 
 }
 h5{
     font-size: 18px;
@@ -95,12 +94,9 @@ h5{
     font-weight: 400;
     color: #71d2ae;  
 }
-
 header{
     height: 60px;
-    
 }
-
 #logo{
     float: left;
     padding: 5px;
@@ -110,8 +106,7 @@ header{
     font-size: 16px;
     color: #555;
     margin: 5px 10px;
-    font-family: 'Titillium Web', sans-serif;
-    
+    font-family: 'Titillium Web', sans-serif; 
 }
 #login{
     float:  right;
@@ -134,25 +129,20 @@ header{
 }
 #submit{
     float: right;
-    margin-left: 10px;
-    
+    margin-left: 10px; 
 }
 main{
-    clear: both;
-    
+    clear: both; 
 }
-
 #cta{
     margin:0 auto;
-    width:460px
-    
+    width:460px  
 }
 .cta_icons{
     float:left;
     clear:both;
     margin-left: 30px;
 }
-
 .cta_text{
     padding:25px;
 }
@@ -160,8 +150,7 @@ main{
     text-align: center;
     width: 100%;
    margin-top: 40px;
-    margin-bottom: 40px;
-    
+    margin-bottom: 40px;  
 }
 
 
@@ -171,7 +160,6 @@ main{
 #register{
     width:500px;
     margin: 0 auto;
-    
 }
 .input-align{
     width:200px;
@@ -179,8 +167,6 @@ main{
     padding: 7px;
     margin: 5px;
 }
-
-
 .label-align{
     display: inline-block;
     width: 150px;
@@ -188,14 +174,9 @@ main{
     font-family: 'Titillium Web', sans-serif;
     margin:7px;
 }
-
 #tos{
     margin-right:20px;
 }
-
-
-
-
 
 
 /* ADMIN DASHBOARD */
@@ -236,7 +217,6 @@ nav a{
     width: 100%;
     height: 50px;
     background-color: #3c3c3c;
-    
 }
 #locals_header{
     width:250px;
@@ -256,14 +236,10 @@ nav a{
     width: 250px;
     text-align: center;   
 }
-
 #locals{
     width:250px;
     height: 500px;
-    float: left;
-    
-    
-    
+    float: left;    
 }
 #user_profile{
     width:458px;
@@ -272,89 +248,61 @@ nav a{
     float: left;
     margin-top: -8px;
     border-left: 1px solid #555555;
-    border-right: 1px solid #555555;
-    
-    
+    border-right: 1px solid #555555;  
 }
 #profile_pic{
     padding: 10px;
-    float: left;
-     
-    
+    float: left;   
 }
 
 #profile_picture{
     float: left;
     width: 220px;
-    text-align: center;
-   
-    
+    text-align: center;  
 }
 #description{
     float: left;
     width: 230px;
-    
-    
-    
+    padding: 2px;
+    margin-top: 5px;  
 }
-
-
-
 #recent_questions{
     width: 250px;
     height: 500px;
-    float: left;
-  
-    
+    float: left;  
 }
 
 .float_icon{
     float:left;
     display: inline-block;
-    clear:both;
-
-    
+    clear:both;    
 }
 .des{
-    padding: 10px;
-
-    
-    
+    padding: 10px;   
 }
-.views{
+.profile_des{
     display: inline;
-
-    
 }
 #user_profile p{
-    padding: 3px;
-    
+    padding: 3px; 
 }
-
 #questions_container{
-    
     background-color: #000;
     height: 50px;
     margin-top: 300px;
     clear: both;
-    
 }
-
 #your_q_header{
     text-align: center;
     line-height: 50px;
-
 }
 #myquestions{
     height: 400px;
     width: 500p;
     margin: 0 auto;
-    clear: both;
-    
+    clear: both;   
 }
 .question{
     display: inline;
-    padding: 10px;
-    
-    
+    padding: 10px;   
 }
