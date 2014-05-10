@@ -349,11 +349,12 @@ nav a{
     height: 400px;
     width: 500p;
     margin: 0 auto;
+    clear: both;
     
 }
 .question{
-    display: inline-block;
-    height: 50px;
-    padding: 20px
+    display: inline;
+    padding: 10px;
+    
     
 }
