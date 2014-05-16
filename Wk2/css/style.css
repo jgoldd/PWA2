@@ -1,0 +1,547 @@
+/*  AUTHOR: Justin Goldman
+    ASSIGNMENT: Prototype
+    DATE: May 7th, 2014
+*/
+
+/* PAGE OVERVIEW */
+
+*{
+   margin:0;
+   padding:0;
+}
+
+body {
+    background-color: #ecf0f1;
+    color:  #3c3c3c;
+    font-family: 'titillium web', sans-serif;
+    font-weight: 300;
+    font-size: 16px; 
+}
+#container{
+    width: 100%;
+    height: 50px;
+    background-color: #FFF;
+    border-bottom: 1px #555555 solid;
+}
+#container_two{
+    width: 100%;
+    height: 100%;
+    clear: both;
+   
+}
+#wrapper{
+    width: 960px;
+    margin: 0 auto;
+    height: 100%;
+}
+a:link {
+    color: #4cc497;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    text-decoration: none;
+ 
+}
+a:visited{
+    color: #71d2ae;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 18px;
+
+}
+a:hover{
+    color: #3c3c3c;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 18px;
+    
+}
+a:active{
+    color: #555555;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 18px;
+    
+}
+h1{
+    font-size: 32px;
+    color: #4cc497;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight:200;
+    
+}
+h2{
+    font-size: 26px;
+    color: #3c3c3c;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 300;
+  
+}
+h3{
+    font-size: 20px;
+    font-family: 'Titillium Web', sans-serif;
+    color: #ecf0f1;
+    font-weight: 200;
+    
+}
+h4{
+    font-size: 18px;
+    font-family: 'Titillium Web', sans-serif;
+    color: #3c3c3c;
+    font-weight: 300; 
+}
+h5{
+    font-size: 18px;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 400;
+    color: #71d2ae;  
+}
+header{
+    overflow: hidden;
+    height: 60px;
+}
+#logo{
+    float: left;
+    padding: 5px;
+    width: 181px;
+}
+
+#login label{
+    float: left;
+    vertical-align: middle;
+    
+}
+#login{
+    float:  right;
+    padding: 10px;
+    width: 500px;
+    overflow: hidden;
+    
+}
+
+#login input{
+    display: inline-block;
+    vertical-align: middle;
+    height: 25px;
+    margin-left: 10px;
+}
+main{
+    clear: both; 
+}
+#cta{
+    margin:0 auto;
+    width:460px  
+}
+.cta_icons{
+    float:left;
+    clear:both;
+    margin-left: 30px;
+}
+.cta_text{
+    padding:25px;
+}
+.kazam{
+    text-align: center;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;  
+}
+
+
+
+
+/* REGISTRATION PAGE */
+
+
+#register{
+    margin: 0 auto;
+    width: 500px;
+    
+    
+}
+#register_form{
+    width: 400px;
+    margin: 0 auto;
+
+}
+#register label{
+    padding: 10px;
+    vertical-align: middle; 
+}
+#register input{
+    vertical-align: middle;  
+}
+#tos{
+    margin-right:20px;
+}
+.register_label{
+    display: inline-block;
+    width: 130px;
+    text-align: right;
+}
+.register_input{
+  width: 180px;
+    height: 25px;
+}
+
+/* ADMIN DASHBOARD LINKS */
+
+nav ul{
+    list-style-type: none;
+    width: 100%;
+    margin-left: -400px;
+}
+nav li{
+    width: 100px;
+    float: right;
+    border-right: #555555 1px solid;
+}
+nav a{
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    clear: both;
+}
+
+/* WELCOME USER & SIGNOUT */
+
+#user_welcome{
+    margin-top: -50px;
+    margin-right: 65px;
+    float: right;
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+
+}
+#sign_out{
+    margin-top: -54px;
+    float: right;
+    height: 50px;
+    line-height: 50px;
+    z-index: 200;
+    clear: both;
+}
+
+
+
+
+
+
+
+/* HEADER AND CONTAINER */
+
+
+#dashheader_container{
+    width: 100%;
+    height: 50px;
+    background-color: #3c3c3c;
+}
+#locals_header{
+    width:250px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    float: left;
+}
+#dash_header{
+    width:460px;
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+#recent_q_header{
+    height: 50px;
+    float: left;
+    width: 250px;
+    line-height: 50px;
+    text-align: center;
+    
+}
+
+/* LOCALS */
+
+#locals{
+    width:250px;
+    height: 500px;
+    float: left;  
+    clear: both;
+    margin-top: 50px;
+}
+
+/*  PROFILE */
+
+
+
+#user_profile{
+    width:458px;
+    height: 510px;
+    background-color: #fff;
+    float: left;
+    margin-top: -8px;
+    border-left: 1px solid #555555;
+    border-right: 1px solid #555555;
+    margin-top: 50px;
+    
+}
+#profile_pic{
+    padding: 10px;
+    float: left;  
+    clear: both;
+}
+
+#profile_picture{
+    float: left;
+    width: 220px;
+    text-align: center;  
+    clear: both;
+}
+#description{
+    float: left;
+    width: 230px;
+    padding: 2px;
+    margin-top: 5px;  
+    
+}
+.des{
+    padding: 10px;
+    margin-top: 10px;
+    
+
+}
+.profile_des{
+    display: inline;
+}
+#description p{
+    padding: 3px; 
+}
+
+/* ACCORDIAN TABS */
+
+#tabs_container{
+    width: 438px;
+    height: 230px;
+    padding: 10px; 
+    clear: both;
+}
+
+.tabs li{
+    float: left;
+    width: 140px;
+    list-style: none;
+    display: inline;
+    border-bottom: 1px solid #555;
+    
+}
+.tabs a{
+    padding: 5px 10px;
+    display:inline-block;
+    
+}
+.tabs a.active{
+    background-color: #555;
+}
+#tab1, #tab2, #tab3{
+    margin-top: 60px;
+    padding: 10px;
+
+    
+}
+
+
+/* RECENT QUESTIONS */
+
+#recent_questions{
+    width: 250px;
+    float: left;
+    margin-top: 50px;
+}
+
+.float_icon{
+    float:left;
+    clear:both;    
+}
+
+
+
+/* MY QUESTIONS */
+
+#questions_container{
+    background-color: #3c3c3c;
+    height: 50px;
+    margin-top: 300px;
+    clear: both;
+}
+#your_q_header{
+    text-align: center;
+    line-height: 50px;
+}
+#myquestions{
+    height: 400px;
+    margin: 0 auto;
+    clear: both;   
+}
+.question{
+    display: inline;
+    padding: 10px;   
+}
+
+
+
+/* PROJECTS PAGE */
+
+#your_p_header{
+    width: 100%;
+    float: left;
+    height: 50px;
+    
+}
+
+#projects_container{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    clear: both;
+    background-color: #3c3c3c;
+}
+
+#add_project{
+    margin: 20px;
+    float: right;
+    position: absolute;
+    top: 30px;
+    right: 50px;
+
+}
+
+#add_project input{
+    vertical-align: middle;
+}
+
+#add_project label{
+    vertical-align: middle;
+    font-size: 18px;
+    font-family: 'Titillium Web', sans-serif;
+    color: #38a57c;
+    font-weight: 300; 
+    
+}
+
+/* MODAL */
+
+#overlay{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    
+}
+#modal {
+    width: 500px;
+    background-color: #ecf0f1;
+    box-shadow: 0 0 10px #000;
+    overflow: hidden;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -200px;
+    z-index: 1001;
+    display: none;  
+}
+#modal .header {
+    padding: 10px;
+    background-color: #555;
+}
+#modal p{
+    margin: 15px;
+}
+#modal .close {
+    position: absolute;
+    right: 5px;
+    top: 2px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #38a57c;
+    padding: 1px 10px;
+    cursor: pointer;
+
+}
+#addForm {
+    padding: 15px;
+}
+
+#addForm label{
+    margin-right: 5px;
+    vertical-align: middle;   
+}
+#addForm input{
+    padding: 2px;
+    vertical-align: middle;
+
+}
+
+.mystatus > input[type=radio]{
+    display: none;
+    
+}
+input[type=radio] + img {
+    cursor: pointer;
+    border: 1px solid transparent;    
+}
+input[type=radio]:checked + img{
+    border: 2px solid #71d2ae;
+    
+}
+#add_projects{
+    margin: 10px;
+    float: right;  
+}
+.project_field{
+   display: inline-block;
+    width: 130px;
+}
+.project_label{
+    width: 180px;
+    
+}
+
+
+
+/* TOOLTIP */
+
+.tooltip{
+    display: none;
+    position: absolute;
+    border: 1px solid #3c3c3c;
+    background-color: #555555;
+    border-radius: 5px;
+    padding: 10px;
+    color: #fff;
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
