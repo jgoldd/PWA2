@@ -19,57 +19,69 @@
 	
 </head>
 
-<body>
-<!-- START CONTAINER DIV --->
+<body id="registration">
+<!-- START CONTAINER DIV -->
 <div id="container">
     <div id="wrapper">
-<!--- START OF HEADER ---> 
+<!--- START OF HEADER --> 
   <header>
       <div id="logo">
           <a href="index.html"><img src="images/dcode_logo.png" alt="dCode Logo"></a>
       </div>
     <form id="login" action="index.html">
        <label id="signin">Sign In:</label>
-        <!--LOGIN INPUT FIELDS--->
-        <input id="user" type="text" name="username" placeholder="E-mail or Username">
-        <input id="pass" type="password" name="password" placeholder="Password">
+        <!--LOGIN INPUT FIELDS-->
+        <input id="user" class="masterTooltip" type="text" name="username" title="Please enter your username.">
+        <input id="pass" class="masterTooltip" type="password" name="password" title="Please enter your password.">
         <input id="signinButton" type="image" value="submit" src="images/submit_button.png">
     </form>
     </header>  
-<!--- END OF HEADER --->
+<!--- END OF HEADER -->
     </div>
 </div>
 <div id="container_two">
     <div id="wrapper">
         <main>
-            <div id="register"><!--- ACCOUNT REGISTRATION SECTION ---> 
-            <h1 class="kazam">Account Registration:</h1>
+            <div id="register"><!--- ACCOUNT REGISTRATION SECTION --> 
+            <h1 class="kazam">Account Registration</h1>
                
-                <form id="register_form">
-        <!--REGISTER INPUT FIELDS--->
-                    <label class="register_label" for="reg_email">E-mail:</label>
-                        <input class="register_input" id="reg_email" type="text" name="reg_email"><br>
-                    <label class="register_label" for="reg_username">Username:</label>
-                        <input class="register_input" id="reg_username" type="text" name="reg_username">
-                    <br>
-                    <label class="register_label" for="reg_password">Password:</label>
-                        <input class="register_input" id="reg_password" type="password" name="reg_password">
+                <form id="register_form" action="admin.html">
+        <!--REGISTER INPUT FIELDS-->
+                    <label class="register_label" for="username">Username:</label>
+                        <input class="masterTooltip" id="username" type="text" name="username" title="Create a username">          <br />
+                    <label class="register_label" for="password">Password:</label>
+                        <input class="masterTooltip" id="password" type="password" name="password" title="Create a password.">
                     <br />
-                    <label  class="register_label" for="ref_conpassword">Confirm Password:</label>
-                        <input class="register_input" id="reg_conpassword" type="password" name="reg_conpassword">
+                    <label class="register_label" for="email">E-Mail:</label>
+                        <input class="masterTooltip" id="email" type="text" name="email" title="Enter your E-mail.">
                     <br />
-                    <label class="register_label" for="reg_fname">First Name:</label>
-                        <input class="register_input" id="reg_fname" type="password" name="reg_fname">
+                    <label  class="register_label" for="firstname">First Name:</label>
+                        <input class="masterTooltip" id="firstname" type="text" name="firstname" title="Enter your first name.">
                     <br />
-                    <label class="register_label" for="reg_lname">Last Name:</label>
-                        <input class="register_input" id="reg_lname" type="password" name="reg_lname">
+                    <label class="register_label" for="lastname">Last Name:</label>
+                        <input class="masterTooltip" id="lastname" type="text" name="lastname" title="Enter your last name.">
+                    <br />
+                    <label class="register_label" for="phone">Phone:</label>
+                        <input class="masterTooltip" id="phone" type="text" name="phone" title="Enter your phone number.">
+                    <br />
+                    <label class="register_label" for="city">City:</label>
+                        <input class="masterTooltip" id="city" type="text" name="city" title="Please enter your city.">
+                    <br />
+                    <label class="register_label" for="state">State:</label>
+                        <input class="masterTooltip" id="state" type="text" name="state" title="Enter enter your state.">
+                    <br />
+                    <label class="register_label" for="zipcode">Zip Code:</label>
+                        <input class="masterTooltip" id="zipcode" type="text" name="zipcode" title="Enter Enter your zipcode.">
+                    
+                    
+                    
                 <div class="kazam">
                 <input type="checkbox" id="tos" name="tos" value="tos"><label class="tos" for="reg_tos">I agree to the <a href="#">Terms of Service.</a></label>
                     </div>
                     <div class="kazam">
-                        <form action="admin.html">
+    
              <input id="reg_submit" type="image" value="submit" src="images/signup_button.png">
-                        </form>
+                        
                     </div>
                 </form>
                 </div>

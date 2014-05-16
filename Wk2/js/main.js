@@ -47,42 +47,47 @@
     
     $(".masterTooltip").hover(function(){
            //Mouse over code    
-            var title = $(this).attr("title");
+            var title = $(this).attr("title");//set var to title attr
             $(this).data("tipText", title).removeAttr("title");
-            $('<p class="tooltip"></p>')
-                .text(title)
+            $('<p class="tooltip"></p>') //remove and put into tooltip paragraph
+                .text(title) //find title and append it to body and fade in
                 .appendTo("body")
                 .fadeIn("slow");
     }, function() {
         //Hover out code
         $(this).attr("title", $(this).data("tipText"));
-        $(".tooltip").remove();
+        $(".tooltip").remove(); //removes tooltip text
     }).mouseover(function(e){
         var mousex = e.pageX + 20; //Get x coordinates of mouse
         var mousey = e.pageY + 10; //Get y coordinates of mouse
         $(".tooltip")
-        .css({ top: mousey, left: mousex})
+        .css({ top: mousey, left: mousex}) //set css for tooltip placement
     });
     
     
     /* ================= MODAL ==================== */
     
     $(".modalClick").on("click", function(e){
-       e.preventDefault();
+       e.preventDefault();//prevents default action
+        //find overlay, fadein, then find modal and fade in
         $("#overlay").fadeIn().find("#modal").fadeIn();  
+        
     });
     
     $(".close").on("click", function(e){
-        e.preventDefault();
+        e.preventDefault();//prevents default action
+        //find overlay, fadeout, then find modal and fade out
         $("#overlay").fadeOut().find("#modal").fadeOut();
     });
     
     /* ============ FADING STATUS OPTION =========== */
     
     $(".mystatus").mouseover(function(){
+        //date status icon to half transp. when hover
         $(this).fadeTo(100, .5);
     });
     $(".mystatus").mouseout(function(){
+        //change back to full on leave
         $(this).fadeTo(100, 1);
     });
     
@@ -142,8 +147,10 @@ $("ul.tabs").each(function(){
       /* ======= SIGN IN & SIGNOUT BUTTON HOVER ======= */
     
     $("#signout").hover(function(){
+        //set attr to roll over button
        $(this).attr("src", "../images/sign_out_button_roll.png");
             }, function() {
+        //when leaving set attr to default state
         $(this).attr("src", "../images/sign_out_button.png");
     });
 	
@@ -151,16 +158,20 @@ $("ul.tabs").each(function(){
     /* ======= SIGN UP BUTTON HOVER ======= */
     
     $("#signup").hover(function(){
+        //set attr to roll over button
        $(this).attr("src", "../images/signup_button_roll.png");
             }, function() {
+        //when leaving set attr to default state
         $(this).attr("src", "../images/signup_button.png");
     });
     
     
     /* ======= LOGIN BUTTON HOVER ======= */
     $("#signinButton").hover(function(){
-       $(this).attr("src", "../images/submit_button_roll.png");
+        //set attr to roll over button
+       $(this).attr("src", "../images/submit_button_roll.png"); 
             }, function() {
+        //when leaving set attr to default state
         $(this).attr("src", "../images/submit_button.png");
     });
     
