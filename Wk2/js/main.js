@@ -148,10 +148,10 @@ $("ul.tabs").each(function(){
     
     $("#signout").hover(function(){
         //set attr to roll over button
-       $(this).attr("src", "../images/sign_out_button_roll.png");
+       $(this).attr("src", "images/sign_out_button_roll.png");
             }, function() {
         //when leaving set attr to default state
-        $(this).attr("src", "../images/sign_out_button.png");
+        $(this).attr("src", "images/sign_out_button.png");
     });
 	
     
@@ -159,20 +159,20 @@ $("ul.tabs").each(function(){
     
     $("#signup").hover(function(){
         //set attr to roll over button
-       $(this).attr("src", "../images/signup_button_roll.png");
+       $(this).attr("src", "images/signup_button_roll.png");
             }, function() {
         //when leaving set attr to default state
-        $(this).attr("src", "../images/signup_button.png");
+        $(this).attr("src", "images/signup_button.png");
     });
     
     
     /* ======= LOGIN BUTTON HOVER ======= */
     $("#signinButton").hover(function(){
         //set attr to roll over button
-       $(this).attr("src", "../images/submit_button_roll.png"); 
+       $(this).attr("src", "images/submit_button_roll.png"); 
             }, function() {
         //when leaving set attr to default state
-        $(this).attr("src", "../images/submit_button.png");
+        $(this).attr("src", "images/submit_button.png");
     });
     
     
