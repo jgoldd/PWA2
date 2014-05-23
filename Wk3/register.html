@@ -36,9 +36,10 @@
     <form id="login" action="index.html">
        <label id="signin">Sign In:</label>
         <!--LOGIN INPUT FIELDS-->
-        <input id="user" class="masterTooltip" type="text" name="username" title="Please enter your username.">
-        <input id="pass" class="masterTooltip" type="password" name="password" title="Please enter your password.">
-        <input id="signinButton" type="image" value="submit" src="images/submit_button.png">
+       <input id="user" class="masterTooltip" type="text" name="signinButton" title="Please enter your username.">
+        <input id="pass" class="masterTooltip" type="password" name="signinButton" title="Please enter your password.">
+        <input id="signinButton" type="button" width="96px" height="30px" name="signinButton">
+        
     </form>
     </header>  
 <!--- END OF HEADER -->
@@ -48,7 +49,7 @@
     <div id="wrapper">
         <main>
             <div id="register"><!--- ACCOUNT REGISTRATION SECTION --> 
-            <h1 class="kazam">Account Registration</h1>
+            <h1 class="kazam" id="drops">Account Registration</h1>
                
                 <form id="register_form" action="admin.html">
         <!--REGISTER INPUT FIELDS-->
@@ -85,7 +86,7 @@
                     </div>
                     <div class="kazam">
     
-             <input id="signup" type="button" >                        
+             <input id="signup" type="button" />                        
                     </div>
                 </form>
                 </div>

@@ -10,7 +10,7 @@
     
     
     
-    /* ==== LOGIN === */
+    /* =============================== LOGIN =============================== */
 
 	
 $("#signinButton").click(function(){
@@ -37,7 +37,7 @@ $("#signinButton").click(function(){
 });
   
 
-  /* ===== LOGOUT ====*/
+    /* ============================================= LOGOUT =========================================*/
     
     $("#signout").click(function(e){
         e.preventDefault;
@@ -50,7 +50,7 @@ $("#signinButton").click(function(){
     
     
     
-    /*============ REGISTER ==========*/
+    /*============================================= REGISTER ===============================================*/
     
     $("#signup").on("click", function(){
         var firstname = $("#firstname").val(),        
@@ -91,7 +91,9 @@ $("#signinButton").click(function(){
         });
     });
     
-   /* ======== DISPLAY USER INFO IN ADMIN DASH =========*/    
+   /* ======================================= DISPLAY USER INFO IN ADMIN DASH =======================================*/    
+    
+    
     $.getJSON("xhr/get_user.php", function(data){
         var username = data.user.user_n;
            $("#user_welcome_name").append(data.user.user_n);
@@ -105,9 +107,7 @@ $("#signinButton").click(function(){
     
     
 	/*
-	===============================================
-	========================= APPLICATION FUNCTIONS	
-	*/
+	============================================ APPLICATION FUNCTIONS	=================================================*/
 	
 	
 	var checkLoginState = function(){
@@ -124,8 +124,8 @@ $("#signinButton").click(function(){
 	
 	
 
-	// 	============================================
-	//	SETUP FOR INIT
+	/* 	========================================= SET UP FOR INIT ========================================================*/
+		
 		
 	var init = function(){
 	
@@ -138,7 +138,7 @@ $("#signinButton").click(function(){
 		
 
     
-    /* ================= TOOLTIP ==================== */
+    /* ============================================= TOOLTIP ========================================================= */
     
     $(".masterTooltip").hover(function(){
            //Mouse over code    
@@ -160,7 +160,7 @@ $("#signinButton").click(function(){
     });
     
     
-    /* ================= MODAL ==================== */
+    /* ============================================ MODAL ================================================ */
     
     $(".modalClick").on("click", function(e){
        e.preventDefault();//prevents default action
@@ -175,7 +175,7 @@ $("#signinButton").click(function(){
         $("#overlay").fadeOut().find("#modal").fadeOut();
     });
     
-    /* ============ FADING STATUS OPTION =========== */
+    /* ============================================== FADING STATUS OPTION ========================================== */
     
     $(".mystatus").mouseover(function(){
         //date status icon to half transp. when hover
@@ -187,7 +187,7 @@ $("#signinButton").click(function(){
     });
     
     
-    /* ========== ACCORDION =========== */
+    /* ====================================================== ACCORDION ===================================== */
     
     
 $("ul.tabs").each(function(){
@@ -228,46 +228,149 @@ $("ul.tabs").each(function(){
     });
 });
     
+    /* =========================================== PROJECTS BUTTON ================================================ */
     
     
-    
-    
-        /* ======= SIGN IN & SIGNOUT BUTTON HOVER ======= */
-    
-    $("#signout").hover(function(){
-        //set attr to roll over button
-       $(this).attr("src", "images/sign_out_button_roll.png");
-            }, function() {
-        //when leaving set attr to default state
-        $(this).attr("src", "images/sign_out_button.png");
+    $("#viewProjects").on("click", function(e){
+        e.preventDefault();
+        window.location.assign("questions.html");
     });
-	
     
-    /* ======= SIGN UP BUTTON HOVER ======= */
     
-    $("#signup").hover(function(){
-        //set attr to roll over button
-       $(this).attr("src", "../images/signup_button_roll.png");
-            }, function() {
-        //when leaving set attr to default state
-        $(this).attr("src", "/images/signup_button.png");
+            /* ====================================================== NEW PROJECTS ===================================== */
+    
+    
+    $(".addProjectModal").on("click", function(e) {
+        e.preventDefault();
+        var projName = $("#projectName").val(),
+            projDesc = $("#projectDescription").val(),
+            projDue = $("#projectDueDate").val(),
+            status = $("#status input:checked").val();
+        
+        
+        $.ajax({
+            url: "xhr/new_project.php",
+            type: "post",
+            dataType: "json",
+            data: {
+                projectName: projName,
+                projectDescription: projDesc,
+                dueDate: projDue,
+                status: status
+                
+            },
+            success: function(response){
+                console.log("testing");
+                
+                if(response.error){
+                    alert(response.error);
+                }else{
+                    window.location.assign("questions.html");
+                };  
+            }
+        });
     });
+    
+    
+    
+     /* =========================================== GET PROJECTS ================================================ */
+    
+    var projects = function(){
+        
+        $.ajax({
+            url: "xhr/get_projects.php",
+            type: "get",
+            dataType: "json",
+            success: function(response){
+                if(response.error){
+                    console.log(response.error);  
+                }else{
+                
+                
+                    for(var i=0, j=response.projects.length; i < j; i++){
+                        var result = response.projects[i];
+                        console.log(response.projects[i]);
+                        
+                        $(".projects_list").append(
+                           "<div id='proj'>" +
+                            "<div id='projResQ'>" +  "Question: "  + "</div>" + "<div id='projResQv'>" + result.projectName +  "</div> <br>" +
+                            "<div id='projResTag'>" + "Question tags: "  + "</div>" + "<div id='projResTagv'>" + result.projectDescription + "</div> <br>" + "<div id='projResId'>" + "Question ID: " + "</div>"  + "<div id='projResIdv'>" + result.id + "</div> <br>" + "</div> <br>" +
+                            "<div id='delete_box'>" + "<input type='button' projectid='" + result.id +"' class='deletebtn' width='72px' height='26px'></input>" + "</div></br><br><br>" 
+                        //  "<button class='editbtn'>Edit</button>" +
+                            
+                       );
+                 
+                    };
+                $(".deletebtn").on("click", function(e){
+                        console.log("test delete");
+                        var pid = $(this).attr("projectid"); //FIND PROJECT ID IN ATTR 
+
+                    $.ajax({
+                        url: "xhr/delete_project.php",
+                        data: {
+                            projectID: pid // set projectid to pid
+                        },
+                        type: "post",
+                        dataType: "json",
+                        success: function(response){
+                            console.log("testing for success");
+                            
+                            if(response.error) {
+                                alert(response.error);
+                                
+                            }else{
+                         
+                                window.location.assign("questions.html");
+                            };
+                        }
+                    });
+                });
+             };
+            }
+         });          
+   };    
+            
+                    //End Delete
+        
+
+    
+            
+          projects();
+
+    
+
+      
+        
+        
+        
+    
+    
     
     
     
     
     
 
+     /* ===================================== SIGNUP CTA BUTTON ====================================================== */
     
     
-    //$("#selectable").selectable();
-   // $("#projectStatus").buttonset();
     
+    $("#signupcta").on("click", function(e){
+        e.preventDefault();
+        window.location.assign("register.html");
+    });
 	
+    /* ===================================== VIEW PROJECTS ====================================================== */   
+    
+    
+    $("#projects_view").on("click", function(e){
+        e.preventDefault();
+        window.location.assign("questions.html");
+    });
+    
+    
 	/*	
-	==================================== END EVENTS 
-	===============================================
-	*/
+	==================================================== END EVENTS ===================================================*/
 		
 		
 

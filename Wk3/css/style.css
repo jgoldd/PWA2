@@ -1,6 +1,5 @@
 /*  AUTHOR: Justin Goldman
-    ASSIGNMENT: Prototype
-    DATE: May 7th, 2014
+   
 */
 
 /* PAGE OVERVIEW */
@@ -177,6 +176,20 @@ main{
     margin: 0 auto;
 }
 
+#signupcta{
+    background: transparent url("../images/signup_button.png") no-repeat top;
+    width: 142px;
+    height: 47px;
+    border: none;
+    cursor: pointer;  
+}
+#signupcta:hover{
+    background: transparent url("../images/signup_button_roll.png") no-repeat top;
+    width: 142px;
+    height: 47px;
+    border: none;
+    cursor: pointer;  
+}
 
 
 
@@ -185,9 +198,7 @@ main{
 
 #register{
     margin: 0 auto;
-    width: 500px;
-    
-    
+    width: 500px;  
 }
 #register_form{
     width: 400px;
@@ -219,8 +230,6 @@ main{
     border: 1px solid #ecf0f1;
     font-size: 14px;
 }
-
-
 #signup{
     background: transparent url("../images/signup_button.png") no-repeat top;
     width: 142px;
@@ -234,6 +243,9 @@ main{
     height: 47px;
     border: none;
     cursor: pointer;  
+}
+#drops{
+    text-shadow: 5px 2px 5px #555;   
 }
 
 /* ADMIN DASHBOARD LINKS */
@@ -260,11 +272,12 @@ nav a{
 
 #user_welcome{
     margin-top: -50px;
-    margin-right: 65px;
+    margin-right: 75px;
     float: right;
     width: 250px;
     height: 50px;
     line-height: 50px;
+    text-align: right;
 
 
 }
@@ -411,9 +424,21 @@ nav a{
 }
 #tab1, #tab2, #tab3{
     margin-top: 60px;
-    padding: 10px;
-
-    
+    padding: 10px;  
+}
+#projects_view{
+    background: transparent url("../images/projects_view.png") no-repeat top;
+    width: 147px;
+    height: 52px;
+    cursor: pointer;
+    border: none;
+}
+#projects_view:hover{
+    background: transparent url("../images/projects_view_roll.png") no-repeat top;
+    width: 147px;
+    height: 52px;
+    cursor: pointer;
+    border: none;
 }
 
 
@@ -482,10 +507,13 @@ nav a{
 
 }
 
-#add_project input{
+#add_project input, .addProjectModal{
     vertical-align: middle;
+    background: transparent url("../images/add_project.png") no-repeat top;
+    width: 38px;
+    height: 38px;
+    border: none;
 }
-
 #add_project label{
     vertical-align: middle;
     font-size: 18px;
@@ -494,6 +522,74 @@ nav a{
     font-weight: 300; 
     
 }
+
+
+
+
+
+
+/* PROJECT LIST */
+
+.projects_list{
+    padding: 20px;
+    
+}
+
+#proj{
+    width: 820px;
+    float: left;
+    margin-top: 30px;
+    border-bottom: 1px solid #555;
+    
+}
+#projResId, #projResQ, #projResTag,
+#projResIdv, #projResQv, #projResTagv{
+    display: inline;
+    
+    
+}
+#projResQ, #projResQv{
+    font-size: 20px;
+}
+#projResTag, #projResTagv{
+    font-size: 14px;
+    
+}
+#projResId, #projResIdv{
+    font-size: 12px;
+    
+    
+}
+
+#projResQ, #projResTag, #projResId{
+    color: #38a57c;
+    padding: 10px;
+    
+    
+}
+
+.deletebtn{
+    background: transparent url("../images/delete_button.png") no-repeat top;
+    width: 72px;
+    height: 26px;
+    cursor: pointer;
+    border: none;
+}
+.deletebtn:hover{
+    background: transparent url("../images/delete_button_roll.png") no-repeat top;
+    width: 72px;
+    height: 26px;
+    cursor: pointer;
+    border: none;
+}
+
+#delete_box{
+    width: 100px;
+    float: right;
+    margin-right: 0px;
+    margin-top: 40px;
+}
+
 
 /* MODAL */
 
@@ -545,12 +641,13 @@ nav a{
 
 #addForm label{
     margin-right: 5px;
-    vertical-align: middle;   
+    vertical-align: middle;
+    margin-top: 10px;
 }
 #addForm input{
     padding: 2px;
     vertical-align: middle;
-
+    margin-top: 10px;
 }
 
 .mystatus > input[type=radio]{
@@ -571,11 +668,15 @@ input[type=radio]:checked + img{
 }
 .project_field{
    display: inline-block;
-    width: 130px;
+    width: 140px;
+    text-align: right;
 }
 #addForm input[type=text]{
-    width: 180px;
+    width: 210px;
     
+}
+#status{
+    text-align: center;
 }
 
 
