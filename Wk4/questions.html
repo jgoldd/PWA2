@@ -1,0 +1,187 @@
+<!doctype html>  
+<html lang="en">
+<head>
+   <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300italic,300,200italic,200,400italic,600' rel='stylesheet' type='text/css'>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>[/dCode] My Questions</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- CSS concatenated and minified via ant build script-->
+	<link rel="stylesheet" href="css/style.css?v=1">
+    
+    <link rel="stylesheet" href="css/jquery-ui-1.10.4.custom.min.css">
+    <link rel="stylesheet" href="css/jquery-ui-1.10.4.custom.css">
+	<!-- end CSS-->
+	<!--Fav icon-->
+    
+    <link rel="icon" href="images/favicon.ico" />
+
+</head>
+
+<body>
+<!-- START CONTAINER DIV --->
+<div id="container">
+    <header id="wrapper">
+<!--- START OF HEADER ---> 
+
+      <div id="logo"><!--- LOGO ---> 
+          <a href="index.html"><img src="images/dcode_logo.png" alt="dCode Logo"></a>
+      </div>
+    <nav>
+      <ul>
+          <li><a href="admin.html">Dashboard</a></li>
+          <li><a href="#">Questions</a></li>
+          <li><a href="#">Locals</a></li>
+      </ul>
+    </nav>
+<div id="user_welcome"><!--- USER WELCOME ---> 
+    <h4>Welcome, <a href="admin.html" id="user_welcome_name"></a></h4>
+</div>
+      <div id="sign_out"><!--- SIGN OUT BUTTON ---> 
+        <form>
+            <input id="signout" type="button">
+        </form>
+      </div>
+ </header>
+
+    </div>
+    
+    
+<div id="projects_container">
+    <div id="wrapper">
+        <div id="your_p_header">
+            <h3>My Questions</h3>
+        
+        <div id="add_project">
+                <input class="modalClick" type="button" width="38px" height="38px" id="addProjectButton" />
+            <label>Add Question</label>
+            
+            
+            
+           </div>
+       </div> 
+    </div>
+</div>      
+
+<!---MAIN CONTENT --->
+<div id="container_two">
+    <div id="wrapper">
+        <main>
+            
+            
+            
+             <div id="overlay">
+                <div id="modal">
+                    <span class="close">X</span>
+                    <h3 class="header">Add Question</h3>
+                <div id="add">
+                 
+                    <form id="addForm">
+                        <label class="project_field">Question:</label>
+                    <input class="masterTooltip" name="projectName" type="text" id="projectName" title="Please enter your question." /><br />
+                        <label class="project_field">Tags:</label>
+                    <input class="masterTooltip" name="projectDescription" type="text" id="tags" title="Please enter tags seperated by commas." /><br />
+                        <label class="project_field">Expiration:</label>
+                    <input class="masterTooltip" name="projectDueDate" type="text" id="datepicker" title="Please enter a date for the question to expire." /><br />
+        <br />
+
+                    
+  </div>
+                        
+                        
+                        
+                        
+                    
+        <div id="status">           
+            <label class="mystatus">
+              <input type="radio" name="status" value="urgent" id="urgent"><img src="images/urgent_status.png" width="70" height="70" />            
+            </label>
+            <label class="mystatus">
+              <input type="radio" name="status" value="normal" id="normal"><img src="images/normal_status.png" width="70" height="70" />            
+            </label>
+            <label class="mystatus">
+              <input type="radio" name="status" value="delayed" id="delayed"><img src="images/delayed_status.png" width="70" height="70" />            
+            </label>
+            <label class="mystatus">
+              <input type="radio" name="status" value="complete" id="complete"><img src="images/complete_status.png" width="70" height="70" />            
+            </label>
+        </div>
+     </form>
+        <div id="add_projects">
+            <form>
+               <input class="addProjectModal" type="button" width="38px" height="38px" />
+                <label>Add Question</label>    
+            </form>
+        </div>   
+    </div>
+   </div>
+</div>
+    <div id="wrapper">
+        <div class="projects_list" id="sortable">
+        </div>
+    </div>
+        </main>
+    </div>
+</div>
+
+    
+    <footer>
+    
+    
+    
+    
+    
+    
+    
+    </footer>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+
+	
+	
+	
+	<!-- jquery -->
+	<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+	<!-- plugins -->
+
+    <script type="text/javascript" src="js/jquery-ui-1.10.4.custom.js"></script>
+    
+	
+	<!-- main -->
+	<script type="text/javascript" src="js/main.js"></script>
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
